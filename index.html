@@ -1,0 +1,750 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/libs/icons-1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/libs/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./assets/libs/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="#" class="nav-branding">
+                    <img src="./assets/img/Default.png" alt="">
+                </a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+
+                    <li class="cart d-flex align-items-center justify-content-center dropdown">
+                        <a href="#" onclick="showCart()" class="cart-icon"><i class="bi bi-cart3"></i></a>
+                        <div id="Cart" class="dropdown-menu">
+                            <div class="price d-flex justify-content-between">
+                                <p>Price: <b>$399.00</b></p>
+                                <p>Amount: <b>3</b></p>
+                            </div>
+                            <div class="option-pay mb-3">
+                                <h6 class="mb-4">Select a Payment Type:</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                        value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        <img src="./assets/img/Mastercard svg.png" alt="">
+                                        <img src="./assets/img/Visa Inc. svg.png" alt="">
+                                        <img src="./assets/img/png.png" alt="">
+                                    </label>
+                                </div>
+                                &nbsp
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                        value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        <img src="./assets/img/PayPal svg.png" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="list-input mb-3">
+                                <div class="row p-3">
+                                    <div class="col-md-12 p-0">
+                                        <div class="item mb-2">
+                                            <span><i class="bi bi-envelope-fill"></i></span>
+                                            <input type="text" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 p-0">
+                                        <div class="item mb-2">
+                                            <span><i class="bi bi-lock-fill"></i></span>
+                                            <input type="password" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 p-0">
+                                        <div class="item" style="border-bottom: 0.5px solid rgba(163, 178, 199, 0.5)">
+                                            <span><i class="bi bi-credit-card-fill"></i></span>
+                                            <input type="text" placeholder="Card number">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <div class="item" style="border-right: 0.5px solid rgba(163, 178, 199, 0.5)">
+                                            <span><i class="bi bi-calendar2-week-fill"></i></span>
+                                            <input type="text" placeholder="MM/YY">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <div class="item">
+                                            <span><i class="bi bi-unlock-fill"></i></span>
+                                            <input type="password" placeholder="CVC">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center mt-4 mb-4">
+                                Your card will be charged <b>$399.00</b>
+                            </p>
+                            <a href="" class="paynow">Paynow</a>
+                        </div>
+    
+                        <button>Sign Up / Log In</button>
+                    </li>
+                </ul>
+
+                <!-- <div class="cart d-flex align-items-center dropdown">
+                    <a href="#" onclick="showCart()" class="cart-icon"><i class="bi bi-cart3"></i></a>
+                    <div id="Cart" class="dropdown-menu">
+                        <div class="price d-flex justify-content-between">
+                            <p>Price: <b>$399.00</b></p>
+                            <p>Amount: <b>3</b></p>
+                        </div>
+                        <div class="option-pay mb-3">
+                            <h6 class="mb-4">Select a Payment Type:</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    <img src="./assets/img/Mastercard svg.png" alt="">
+                                    <img src="./assets/img/Visa Inc. svg.png" alt="">
+                                    <img src="./assets/img/png.png" alt="">
+                                </label>
+                            </div>
+                            &nbsp
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    <img src="./assets/img/PayPal svg.png" alt="">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="list-input mb-3">
+                            <div class="row p-3">
+                                <div class="col-md-12 p-0">
+                                    <div class="item mb-2">
+                                        <span><i class="bi bi-envelope-fill"></i></span>
+                                        <input type="text" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 p-0">
+                                    <div class="item mb-2">
+                                        <span><i class="bi bi-lock-fill"></i></span>
+                                        <input type="password" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 p-0">
+                                    <div class="item" style="border-bottom: 0.5px solid rgba(163, 178, 199, 0.5)">
+                                        <span><i class="bi bi-credit-card-fill"></i></span>
+                                        <input type="text" placeholder="Card number">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-0">
+                                    <div class="item" style="border-right: 0.5px solid rgba(163, 178, 199, 0.5)">
+                                        <span><i class="bi bi-calendar2-week-fill"></i></span>
+                                        <input type="text" placeholder="MM/YY">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-0">
+                                    <div class="item">
+                                        <span><i class="bi bi-unlock-fill"></i></span>
+                                        <input type="password" placeholder="CVC">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-4 mb-4">
+                            Your card will be charged <b>$399.00</b>
+                        </p>
+                        <a href="" class="paynow">Paynow</a>
+                    </div>
+
+                    <button>Sign Up / Log In</button>
+                </div> -->
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="container d-flex justify-content-between">
+            <div class="banner-left">
+                <h1>
+                    Find your course Change your life
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.
+                </p>
+                <div class="search">
+                    <span><i class="bi bi-search"></i></span>
+                    <input type="text" placeholder="Search for a course">
+                    <a href="" class="course">Search Course</a>
+                </div>
+            </div>
+
+            <div class="banner-right">
+                <img src="./assets/img/Image.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="special">
+        <div class="container">
+            <ul class="d-flex justify-content-between">
+                <li><img src="./assets/img/Vector.png" alt=""></li>
+                <li><img src="./assets/img/Hubspot Logo.png" alt=""></li>
+                <li><img src="./assets/img/Google Logo.png" alt=""></li>
+                <li><img src="./assets/img/Microsoft Logo.png" alt=""></li>
+                <li><img src="./assets/img/Walmart Logo.png" alt=""></li>
+                <li><img src="./assets/img/FedEx Logo.png" alt=""></li>
+            </ul>
+
+            <div class="our-special mt-5">
+                <h2 class="text-center">Our Special Features For You</h2>
+                <p class="lorem text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+                <div class="list-special">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="item text-center">
+                                <img src="./assets/img/Features Icon.png" alt="">
+                                <h6>Pro Programs</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="item text-center">
+                                <img src="./assets/img/Features Icon.png" alt="">
+                                <h6>24/7 Support</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="item text-center">
+                                <img src="./assets/img/Features Icon.png" alt="">
+                                <h6>Career Planning</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="item text-center">
+                                <img src="./assets/img/Features Icon.png" alt="">
+                                <h6>Professional training</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="learning">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="learning-left">
+                        <h2>Learning Steps For You</h2>
+                        <p class="para-lear">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+
+                        <ul class="mt-5">
+                            <li class="d-flex align-items-center">
+                                <img src="./assets/img/Icons Step.png" alt="">
+                                <div class="title">
+                                    <h6>Create Account</h6>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                        euismod tincidunt.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img src="./assets/img/Icon2.png" alt="">
+                                <div class="title">
+                                    <h6>Choose Course</h6>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                        euismod tincidunt.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img src="./assets/img/Icon3.png" alt="">
+                                <div class="title">
+                                    <h6>Enjoy Learning</h6>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                        euismod tincidunt.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="learning-right">
+                        <img src="./assets/img/boy1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="most">
+        <div class="container">
+            <h2 class="text-center">Most Popular Courses</h2>
+            <p class="para-most text-center">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat.
+            </p>
+
+            <div class="list-most">
+                <div class="item">
+                    <img src="./assets/img/I1.png" alt="">
+                    <div class="title-item">
+                        <div class="chezz d-flex justify-content-between">
+                            <div class="lesson d-flex justify-content-betwee">
+                                <img src="./assets/img/Icon-most.png" alt="">
+                                <p>26 lessons</p>
+                            </div>
+                            <div class="list-star">
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                            </div>
+                        </div>
+                        <h6>Graphic Design & Color Painting Essential Skills</h6>
+                        <div class="dec d-flex justify-content-between align-items-center">
+                            <div class="ava d-flex justify-content-between">
+                                <img src="./assets/img/ava.png" alt="">
+                                <div class="name-span">
+                                    <span>David Novan</span>
+                                    <span>Teacher</span>
+                                </div>
+                            </div>
+
+                            <a href="" class="more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/I5.png" alt="">
+                    <div class="title-item">
+                        <div class="chezz d-flex justify-content-between">
+                            <div class="lesson d-flex justify-content-betwee">
+                                <img src="./assets/img/Icon-most.png" alt="">
+                                <p>26 lessons</p>
+                            </div>
+                            <div class="list-star">
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                            </div>
+                        </div>
+                        <h6>Graphic Design & Color Painting Essential Skills</h6>
+                        <div class="dec d-flex justify-content-between align-items-center">
+                            <div class="ava d-flex justify-content-between">
+                                <img src="./assets/img/ava.png" alt="">
+                                <div class="name-span">
+                                    <span>David Novan</span>
+                                    <span>Teacher</span>
+                                </div>
+                            </div>
+
+                            <a href="" class="more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/I2.png" alt="">
+                    <div class="title-item">
+                        <div class="chezz d-flex justify-content-between">
+                            <div class="lesson d-flex justify-content-betwee">
+                                <img src="./assets/img/Icon-most.png" alt="">
+                                <p>26 lessons</p>
+                            </div>
+                            <div class="list-star">
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                            </div>
+                        </div>
+                        <h6>Graphic Design & Color Painting Essential Skills</h6>
+                        <div class="dec d-flex justify-content-between align-items-center">
+                            <div class="ava d-flex justify-content-between">
+                                <img src="./assets/img/ava.png" alt="">
+                                <div class="name-span">
+                                    <span>David Novan</span>
+                                    <span>Teacher</span>
+                                </div>
+                            </div>
+
+                            <a href="" class="more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/I3.png" alt="">
+                    <div class="title-item">
+                        <div class="chezz d-flex justify-content-between">
+                            <div class="lesson d-flex justify-content-betwee">
+                                <img src="./assets/img/Icon-most.png" alt="">
+                                <p>26 lessons</p>
+                            </div>
+                            <div class="list-star">
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                            </div>
+                        </div>
+                        <h6>Graphic Design & Color Painting Essential Skills</h6>
+                        <div class="dec d-flex justify-content-between align-items-center">
+                            <div class="ava d-flex justify-content-between">
+                                <img src="./assets/img/ava.png" alt="">
+                                <div class="name-span">
+                                    <span>David Novan</span>
+                                    <span>Teacher</span>
+                                </div>
+                            </div>
+
+                            <a href="" class="more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/I4.png" alt="">
+                    <div class="title-item">
+                        <div class="chezz d-flex justify-content-between">
+                            <div class="lesson d-flex justify-content-betwee">
+                                <img src="./assets/img/Icon-most.png" alt="">
+                                <p>26 lessons</p>
+                            </div>
+                            <div class="list-star">
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                            </div>
+                        </div>
+                        <h6>Graphic Design & Color Painting Essential Skills</h6>
+                        <div class="dec d-flex justify-content-between align-items-center">
+                            <div class="ava d-flex justify-content-between">
+                                <img src="./assets/img/ava.png" alt="">
+                                <div class="name-span">
+                                    <span>David Novan</span>
+                                    <span>Teacher</span>
+                                </div>
+                            </div>
+
+                            <a href="" class="more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/I5.png" alt="">
+                    <div class="title-item">
+                        <div class="chezz d-flex justify-content-between">
+                            <div class="lesson d-flex justify-content-betwee">
+                                <img src="./assets/img/Icon-most.png" alt="">
+                                <p>26 lessons</p>
+                            </div>
+                            <div class="list-star">
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                                <span><i class="bi bi-star-fill"></i></span>
+                            </div>
+                        </div>
+                        <h6>Graphic Design & Color Painting Essential Skills</h6>
+                        <div class="dec d-flex justify-content-between align-items-center">
+                            <div class="ava d-flex justify-content-between">
+                                <img src="./assets/img/ava.png" alt="">
+                                <div class="name-span">
+                                    <span>David Novan</span>
+                                    <span>Teacher</span>
+                                </div>
+                            </div>
+
+                            <a href="" class="more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="student pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="student-left">
+                        <h2>Why Students Choose Us for Gain Their Knowledge</h2>
+                        <p class="para-lear">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+
+                        <ul class="mt-5">
+                            <li class="d-flex">
+                                <img src="./assets/img/st1.png" alt="">
+                                <div class="title">
+                                    <h6>Lorem ipsum dolor sit amet, consectetuer.</h6>
+                                </div>
+                            </li>
+                            <li class="d-flex">
+                                <img src="./assets/img/st2.png" alt="">
+                                <div class="title">
+                                    <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing.</h6>
+                                </div>
+                            </li>
+                            <li class="d-flex">
+                                <img src="./assets/img/st3.png" alt="">
+                                <div class="title">
+                                    <h6>Consectetuer adipiscing elit.</h6>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="student-right">
+                        <img src="./assets/img/girl2.png" alt="">
+
+                        <div class="list-img">
+                            <img src="./assets/img/Outstanding figures.png" alt="">
+                            <img src="./assets/img/Outstanding figures2.png" alt="">
+                            <img src="./assets/img/Outstanding figures3.png" alt="">
+                            <img src="./assets/img/Outstanding figures4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="resources">
+        <div class="container">
+            <h2 class="text-center text-light">Resources & Insight</h2>
+            <p class="para-re">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <div class="resources-items mt-5">
+                <div class="items">
+                    <a href="">
+                        <img src="./assets/img/r1.png" alt="">
+                        <span>2 days ago</span>
+                        <h6>Engendering A Culture Of Professional Development</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh conse
+                            consectetuer adipiscing elit consectetuer sed diam nonummy nib...</p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="">
+                        <img src="./assets/img/r2.png" alt="">
+                        <span>2 days ago</span>
+                        <h6>Engendering A Culture Of Professional Development</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh conse
+                            consectetuer adipiscing elit consectetuer sed diam nonummy nib...</p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="">
+                        <img src="./assets/img/r3.png" alt="">
+                        <span>2 days ago</span>
+                        <h6>Engendering A Culture Of Professional Development</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh conse
+                            consectetuer adipiscing elit consectetuer sed diam nonummy nib...</p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="">
+                        <img src="./assets/img/r1.png" alt="">
+                        <span>2 days ago</span>
+                        <h6>Engendering A Culture Of Professional Development</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh conse
+                            consectetuer adipiscing elit consectetuer sed diam nonummy nib...</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="business">
+        <div class="container">
+            <h2 class="text-center">Our team is the best in the business.</h2>
+            <p class="text-center">Highly professional and capable of running your business across all digital channels.
+            </p>
+
+            <div class="list-business mt-5">
+                <div class="item">
+                    <img src="./assets/img/Avatar.png" alt="">
+                    <h6>Macauley Herring</h6>
+                    <span>Teacher</span>
+                    <ul class="d-flex justify-content-center mt-3">
+                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/Avatar.png" alt="">
+                    <h6>Macauley Herring</h6>
+                    <span>Teacher</span>
+                    <ul class="d-flex justify-content-center mt-3">
+                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/Avatar.png" alt="">
+                    <h6>Macauley Herring</h6>
+                    <span>Teacher</span>
+                    <ul class="d-flex justify-content-center mt-3">
+                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/Avatar.png" alt="">
+                    <h6>Macauley Herring</h6>
+                    <span>Teacher</span>
+                    <ul class="d-flex justify-content-center mt-3">
+                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/Avatar.png" alt="">
+                    <h6>Macauley Herring</h6>
+                    <span>Teacher</span>
+                    <ul class="d-flex justify-content-center mt-3">
+                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/Avatar.png" alt="">
+                    <h6>Macauley Herring</h6>
+                    <span>Teacher</span>
+                    <ul class="d-flex justify-content-center mt-3">
+                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/Avatar.png" alt="">
+                    <h6>Macauley Herring</h6>
+                    <span>Teacher</span>
+                    <ul class="d-flex justify-content-center mt-3">
+                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/Avatar.png" alt="">
+                    <h6>Macauley Herring</h6>
+                    <span>Teacher</span>
+                    <ul class="d-flex justify-content-center mt-3">
+                        <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="launch">
+        <div class="container">
+            <div class="launch-main">
+                <img src="./assets/img/Vector11.svg" alt="">
+                <img src="./assets/img/Vector12.png" alt="">
+                <img src="./assets/img/Vector2.svg" alt="">
+                <img src="./assets/img/Vector12.png" alt="">
+                <div class="title">
+                    <h2 class="text-center text-light">Be the first to know when we launch</h2>
+                    <p class="text-center text-light">Stay in the loop with everything you need to know.</p>
+                    <div class="butt">
+                        <span class="text-secondary"><i class="bi bi-envelope-fill"></i></span>
+                        <input type="text" placeholder="Enter your Email">
+                        <a href="">Subscribe</a>
+                    </div>
+                    <p class="text-center text-light">We care about your data in our Privacy policy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container d-flex justify-content-between">
+            <div class="footer-left">
+                <a href="">
+                    <img src="./assets/img/Default.png" alt="">
+                </a>
+                <ul class="d-flex justify-content-between mt-4">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Courses</a></li>
+                    <li><a href="">Article</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+                <p>© 2023 Library. All rights reserved.</p>
+            </div>
+
+            <div class="footer-right">
+                <p>Get the App</p>
+                <div class="link-app">
+                    <a href=""><img src="./assets/img/Google Play.svg" alt=""></a>
+                    <a href=""><img src="./assets/img/App Store.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="./assets/libs/jquery/jquery-3.6.1.min.js"></script>
+<script src="./assets/libs/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+<script src="./assets/libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="main.js"></script>
+
+</html>
